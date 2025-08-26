@@ -2,7 +2,7 @@
 session_start();
 require_once 'data/users.php';
 
-function gallery($nombre, $sexe, $users)
+function gallery($nombre = 'all', $sexe = 'all', $users)
 {
     $i = 0;
     foreach ($users as $user) {
@@ -40,7 +40,8 @@ function gallery($nombre, $sexe, $users)
         <div class="container">
             <h1 class="mb-4 text-center">Gallery</h1>
             <div class="row">
-                <?php gallery(2, 'Homme', $users); ?>
+                <?php gallery(5, 'Femme', $users);
+                ?>
             </div>
         </div>
     </main>
